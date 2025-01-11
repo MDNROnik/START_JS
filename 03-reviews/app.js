@@ -35,9 +35,9 @@ const author = document.getElementById("authoer");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
-const left = document.querySelector('.prev-btn');
-const right = document.querySelector('.next-btn');
-const random = document.querySelector('.random-btn');
+const btn = document.getElementsByClassName("btn");
+// const right = document.querySelector('.btn');
+// const random = document.querySelector('.btn');
 
 let index = 0;
 let siz = reviews.length;
@@ -46,7 +46,6 @@ let siz = reviews.length;
 
 
 setperson = (index)=>{
-  console.log(1111111);
   const now = reviews[index];
   img.src = now.img;
   author.textContent = now.name;
@@ -60,23 +59,45 @@ window.addEventListener('DOMContentLoaded', function(){
   setperson(index);
 });
 
-left.addEventListener('click',function(){
-  index--;
-  if(index<0){
-    index = siz-1;
-  }
-  setperson(index);
-});
+for(let i=0;i<btn.length;i++){
+  btn[i].addEventListener('click', function(){
+    if(btn[i].classList[1]=="prev"){
+      index--;
+      if(index<0){
+        index = siz-1;
+      }
+    }
+    else if(btn[i].classList[1]=="next"){
+      index++;
+      if(index>=siz){
+        index = 0;
+      }
+    }
+    else if(btn[i].classList[1]=="random"){
+      index = Math.floor(Math.random()*siz);
+    }
+    setperson(index);
+  });
+}
 
-right.addEventListener('click',function(){
-  index++;
-  if(index>=siz){
-    index = 0;
-  }
-  setperson(index);
-});
 
-random.addEventListener('click',function(){
-  index = Math.floor(Math.random()*siz);
-  setperson(index);
-});
+// left.addEventListener('click',function(){
+//   index--;
+//   if(index<0){
+//     index = siz-1;
+//   }
+//   setperson(index);
+// });
+
+// right.addEventListener('click',function(){
+//   index++;
+//   if(index>=siz){
+//     index = 0;
+//   }
+//   setperson(index);
+// });
+
+// random.addEventListener('click',function(){
+//   index = Math.floor(Math.random()*siz);
+//   setperson(index);
+// });
