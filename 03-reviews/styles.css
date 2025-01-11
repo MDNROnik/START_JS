@@ -241,8 +241,8 @@ main {
 #info {
   margin-bottom: 0.75rem;
 }
-.prev-btn,
-.next-btn {
+.btn,
+.btn {
   color: var(--clr-primary-7);
   font-size: 1.25rem;
   background: transparent;
@@ -251,11 +251,11 @@ main {
   transition: var(--transition);
   cursor: pointer;
 }
-.prev-btn:hover,
-.next-btn:hover {
+.btn:hover,
+.btn:hover {
   color: var(--clr-primary-5);
 }
-.random-btn {
+.btn {
   margin-top: 0.5rem;
   background: var(--clr-primary-10);
   color: var(--clr-primary-5);
@@ -266,7 +266,7 @@ main {
   border-color: var(--clr-primary-5);
   cursor: pointer;
 }
-.random-btn:hover {
+.btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
 }
