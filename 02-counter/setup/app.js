@@ -13,12 +13,19 @@ for(let i=0;i<btns.length;i++){
             count.textContent = --counter;
         }
 
-        if(btns[i].classList[1]=="reset"){
+        else if(btns[i].classList[1]=="reset"){
             count.textContent = counter = 0;
         }
 
-        if(btns[i].classList[1]=="increase"){
+        else if(btns[i].classList[1]=="increase"){
             count.textContent = ++counter;
+        }
+
+        if(counter>0){
+            count.style.color = "green";
+        }
+        else if(counter<0){
+            count.style.color = "red";
         }
 
     });
