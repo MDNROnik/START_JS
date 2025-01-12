@@ -92,8 +92,8 @@ window.addEventListener("DOMContentLoaded", function () {
           </div>
         </article>`;
   });
-  displayMenu = displayMenu.join("");
-  sectionCenter.innerHTML = displayMenu;
+  let displayMenu2 = displayMenu.join("");
+  sectionCenter.innerHTML = displayMenu2;
 });
 
 
@@ -123,7 +123,7 @@ for(let i=0;i<btn.length;i++){
           </article>`;
       }
     });
-    displayMenu = displayMenu.join("");
-    sectionCenter.innerHTML = displayMenu;
+    let displayMenu2 = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu2;
   });
 }
